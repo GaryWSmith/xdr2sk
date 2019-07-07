@@ -13,6 +13,7 @@ The address and port details are defined in the dictionary - see below.
 XDR messages are used to provide data relating to transducers. They have a reputation for being ad hoc and are somewhat unsupported - hence this program. XDR messages are made up of one or more quadruples. The second field in the quadruple contains the data and the 4th field is the name field. 
 
 Here are examples:
+
 $IIXDR,C,28.7,C,ENV_OUTSIDE_T,P,101400,P,ENV_ATMOS_P,H,47.38,P,ENV_OUTSIDE_H*32
 $IIXDR,C,,C,ENV_WATER_T,C,28.69,C,ENV_OUTAIR_T,P,101400,P,ENV_ATMOS_P*69
 
