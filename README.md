@@ -30,3 +30,8 @@ This is an example of a sensor definition in the dictionary:
 			expression = "(x+273.15)";
 			sk_path ="environment.outside.temperature" },
 
+The program uses Tinyexpr for the algebraic expression engine
+https://github.com/codeplea/tinyexpr
+
+It also uses Libconfig for reading the Dictionary file
+https://github.com/hyperrealm/libconfig
