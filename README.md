@@ -8,7 +8,7 @@ It uses TCP sockets for both input and output. It is assumed that the NMEA XDR m
 The input side is therefore a TCP client.
 The Signal K server supports a TCP connection to a TCP server, therefore the output side is a TCP server.
 
-The address and port details are defined in the dictionary - see below.
+The address and port details are defined in a dictionary file.
 
 XDR messages are used to provide data relating to transducers. They have a reputation for being ad hoc and are somewhat unsupported - hence this program. XDR messages are made up of one or more quadruples. The second field in the quadruple contains the data and the 4th field is the name field. https://en.wikipedia.org/wiki/NMEA_0183
 
