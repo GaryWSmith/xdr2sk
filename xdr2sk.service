@@ -1,0 +1,22 @@
+[Unit]
+Description=NMEA 0183 XDR to SignalK converter service
+ConditionFileIsExecutable=/usr/bin/xdr2sk
+ConditionFileNotEmpty=/etc/xdr2sk/Dictionary.cfg
+After=network.target 
+Wants=kplex.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+ExecStart=/usr/bin/xdr2sk -o mode=background
+Restart=on-failure
+RestartSec=10
+ExecStop=/usr/bin/pkill -9 xdr2sk
+ExecReload=/usr/bin/pkill -1 xdr2sk
+
+
+[Install]
+WantedBy=multi-user.target
