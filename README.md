@@ -45,7 +45,7 @@ To build and install on any debian based Linux distribution (sudo) but should bu
 3) Follow these instructions to install libconfig https://github.com/hyperrealm/libconfig/blob/master/INSTALL
 4) Open a terminal in the xdr2sk directory
 5) type "make" and hit the return key - this should build the xdr2sk binary
-6) type "sudo make install" and hit return - this should install the xdr2sk binary into /usr/bin/
+6) type "sudo make install" and hit return - this should install the xdr2sk binary into /usr/bin/ and the dictionary into /etc/xdr2sk
 
 To remove the installation type "sudo make clean" and hit return. 
 
