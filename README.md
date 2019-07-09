@@ -50,14 +50,14 @@ To build and install on any debian based Linux distribution (sudo) but should bu
 To remove the installation type "sudo make clean" and hit return. 
 
 Before running xdr2sk edit the Dictionary.cfg as required. The program requires both TCP input and outputs to be defined. Something like kplex serves as an input. You will need to have this configured and the matching values configured in the dictionary example:
-TCP_in_address = "127.0.0.1";
-TCP_in_port = 10300;
+TCP_in_address = "<address_of_your_XDR_provider"; // e.g. "127.0.0.1"; 
+TCP_in_port = <port_number_of your_XDR_provider>; // e.g. 10300;
 
 Also your signal K server should have a connection configured and the details should match the settings in the dictionary.
-TCP_out_address = "gary-laptop.local";
-TCP_out_port = 10250;
+TCP_out_address = "<address_of_yourSignalK_server>"; // This is not critical
+TCP_out_port = <port_number_as_configured_in_your_SignalK_server_connection>; e.g. 10250;
 
-It is not critical that you have XDR messages defined in the Dictionary at this point, the program will run but other than some conversation between it and the Signal K server no usable data will be generated.
+It is not critical that you have XDR messages defined in the Dictionary at this point, the program will run but other than some conversation between it and the Signal K server no usable data will be passed to the server.
 
 To run as a service (systemd must be installed)
 1) copy the "xdr2sk.service" file to /etc/systemd/system/ (sudo cp xdr2sk.service /etc/systemd/system/)
