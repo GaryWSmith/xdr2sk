@@ -23,12 +23,12 @@ The dictionary also includes an "expression" field which allows some algebraic c
 
 This is an example of a sensor definition in the dictionary:
 
-			{type = "Air temperature";  // "Vessel attitude" is a special value to identify attitude "objects"
-			data = "temperature";	// descriptive only
-			units = "float";	// describe the data output - options = int, float, radians
-			name = "ENV_OUTAIR_T";	// used to match the 4th field in a XDR quadruple
-			expression = "(x+273.15)";	// used to change units from native to SI
-			sk_path ="environment.outside.temperature" },// the destination path in the Signal K delta format
+	{type = "Air temperature";  // "Vessel attitude" is a special value to identify attitude "objects"
+	data = "temperature";	// descriptive only
+	units = "float";	// describe the data output - options = int, float, radians
+	name = "ENV_OUTAIR_T";	// used to match the 4th field in a XDR quadruple
+	expression = "(x+273.15)";	// used to change units from native to SI
+	sk_path ="environment.outside.temperature" },// the destination path in the Signal K delta format
 
 There would be one definition for each quadruple in an XDR message. Without a definition the quadruple is ignored. 
 
